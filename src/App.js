@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { AppBar, Toolbar, Typography, Box, Container } from "@mui/material";
+import BootstrapDialog from "./components/BootstrapDialog";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            My Material Ui App
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Container>
+        <Typography variant="h4" sx={{ mt: 2 }}>
+          Добро пожаловать в наше приложение!
+        </Typography>
+        <BootstrapDialog />
+      </Container>
+    </Box>
   );
 }
 
